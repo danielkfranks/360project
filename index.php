@@ -13,7 +13,7 @@
   </head>
   <body>
     <h2> There's a lot of existing Project360 code and styles here that we don't have access to yet </h2>
-    <table class="table">
+    <table class="table col-8">
       <tr>
         <th>Functional Dependency</th>
         <th>True</th>
@@ -60,15 +60,15 @@
         <td><input type="radio" name="truefalse2" value="true"></td>
         <td><input type="radio" name="truefalse2" value="false"></td>
 	<td > <!-- may need to include btn-group-toggle -->
-	  <div class="btn-group-vertical btn-group-toggle">
+	  <div class="btn-group-vertical ">
 	    <label  class="btn btn-secondary ">
-	      <input type="checkbox" name="tuples" id="t1" value="t1">T1
+	      <input type="checkbox" class="btn-check" name="tuples" id="t1" value="t1">T1
 	    </label>
 	    <label  class="btn btn-secondary">
-	      <input type="checkbox" name="tuples" id="t2" value="t2">T2
+	      <input type="checkbox" class="btn-check" name="tuples" id="t2" value="t2">T2
 	    </label>
 	    <label  class="btn btn-secondary">
-	      <input type="checkbox" name="tuples" id="t3" value="t3">T3
+	      <input type="checkbox" class="btn-check" name="tuples" id="t3" value="t3">T3
 	    </label>
 	  </div>
 	</td>
