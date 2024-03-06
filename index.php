@@ -2,7 +2,8 @@
 
 <html>
   <head>
-    <title>Bootstrap Example</title>
+    <title>NoDD</title>
+    <link rel="icon" type="image/x-icon" href="/img/hasan.jpg">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -11,6 +12,93 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-    <p>Hello, World!</p>
+    <h2> There's a lot of existing Project360 code and styles here that we don't have access to yet </h2>
+    <table class="table">
+      <tr>
+        <th>Functional Dependency</th>
+        <th>True</th>
+        <th>False</th>
+        <th>Tuples</th>
+        <th>LHS Columns</th>
+	<th>RHS Columns</th>
+        <th>Observation</th>
+        <th>Active</th>
+      </tr>
+      <tr>
+        <td>AB -> C</td>
+        <td><input type="radio" name="truefalse" value="true"></td>
+        <td><input type="radio" name="truefalse" value="false"></td>
+	<td>
+	  <input type="checkbox" name="tuples" id="t1" value="t1">
+	  <label for="t1">T1</label><br>
+	  <input type="checkbox" name="tuples" id="t2" value="t2">
+	  <label for="t2">T2</label><br>
+	  <input type="checkbox" name="tuples" id="t3" value="t3">
+	  <label for="t3">T3</label><br>
+        </td>
+	<td>
+	  <input type="checkbox" name="tuples" id="A" value="A">
+	  <label for="A">A</label><br>
+	  <input type="checkbox" name="tuples" id="B" value="B">
+	  <label for="B">B</label><br>
+	  <input type="checkbox" name="tuples" id="C" value="C">
+	  <label for="C">C</label><br>
+	</td>
+	<td>
+	  <input type="checkbox" name="tuples" id="A" value="A">
+	  <label for="A">A</label><br>
+	  <input type="checkbox" name="tuples" id="B" value="B">
+	  <label for="B">B</label><br>
+	  <input type="checkbox" name="tuples" id="C" value="C">
+	  <label for="C">C</label><br>
+	</td>
+        <td><input type="text" style=""></td>
+	<td><input type="radio" name="active" value="1"></td>
+      </tr>
+      <tr>
+        <td>B -> A</td>
+        <td><input type="radio" name="truefalse2" value="true"></td>
+        <td><input type="radio" name="truefalse2" value="false"></td>
+	<td > <!-- may need to include btn-group-toggle -->
+	  <div class="btn-group-vertical btn-group-toggle">
+	    <label  class="btn btn-secondary ">
+	      <input type="checkbox" name="tuples" id="t1" value="t1">T1
+	    </label>
+	    <label  class="btn btn-secondary">
+	      <input type="checkbox" name="tuples" id="t2" value="t2">T2
+	    </label>
+	    <label  class="btn btn-secondary">
+	      <input type="checkbox" name="tuples" id="t3" value="t3">T3
+	    </label>
+	  </div>
+	</td>
+	<td >
+	 <div class="btn-group-vertical">
+	   <button type="button" class="btn btn-secondary">button</button> 
+	   <button type="button" class="btn btn-secondary">button</button> 
+	   <button type="button" class="btn btn-secondary">button</button> 
+	  </div>
+	</td>
+	<!-- td>
+	  <input type="checkbox" name="tuples" id="A" value="A">
+	  <label for="A">A</label><br>
+	  <input type="checkbox" name="tuples" id="B" value="B">
+	  <label for="B">B</label><br>
+	  <input type="checkbox" name="tuples" id="C" value="C">
+	  <label for="C">C</label><br>
+	</td-->
+	<td>
+	  <input type="checkbox" name="tuples" id="A" value="A">
+	  <label for="A">A</label><br>
+	  <input type="checkbox" name="tuples" id="B" value="B">
+	  <label for="B">B</label><br>
+	  <input type="checkbox" name="tuples" id="C" value="C">
+	  <label for="C">C</label><br>
+	</td>
+        <td><input type="text" style=""></td>
+	<td><input type="radio" name="active" value="1"></td>
+      </tr>
+
+    </table>
   </body>
 </html>
