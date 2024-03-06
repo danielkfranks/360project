@@ -13,7 +13,7 @@
   </head>
   <body>
     <h2> There's a lot of existing Project360 code and styles here that we don't have access to yet </h2>
-    <table class="table col-8">
+    <table class="table col-8 table-bordered">
       <tr>
         <th>Functional Dependency</th>
         <th>True</th>
@@ -58,8 +58,16 @@
       <tr>
         <td>B -> A</td>
         <td><input type="radio" name="truefalse2" value="true"></td>
-        <td><input type="radio" name="truefalse2" value="false"></td>
-	<td > <!-- may need to include btn-group-toggle -->
+	<td><input type="radio" name="truefalse2" value="false"></td>
+	<td>
+	  <input type="checkbox" name="tuples" id="t1" value="t1">
+	  <label for="t1">T1</label><br>
+	  <input type="checkbox" name="tuples" id="t2" value="t2">
+	  <label for="t2">T2</label><br>
+	  <input type="checkbox" name="tuples" id="t3" value="t3">
+	  <label for="t3">T3</label><br>
+        </td>
+	<!-- td > 
 	  <div class="btn-group-vertical ">
 	    <label  class="btn btn-secondary ">
 	      <input type="checkbox" class="btn-check" name="tuples" id="t1" value="t1">T1
@@ -78,15 +86,15 @@
 	   <button type="button" class="btn btn-secondary">button</button> 
 	   <button type="button" class="btn btn-secondary">button</button> 
 	  </div>
-	</td>
-	<!-- td>
+	</td -->
+	<td>
 	  <input type="checkbox" name="tuples" id="A" value="A">
 	  <label for="A">A</label><br>
 	  <input type="checkbox" name="tuples" id="B" value="B">
 	  <label for="B">B</label><br>
 	  <input type="checkbox" name="tuples" id="C" value="C">
 	  <label for="C">C</label><br>
-	</td-->
+	</td>
 	<td>
 	  <input type="checkbox" name="tuples" id="A" value="A">
 	  <label for="A">A</label><br>
