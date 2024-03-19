@@ -233,12 +233,12 @@
 
     </table>
 
-   <input type="button" name="submit" value="Submit" onclick="">
+   <input type="button" class="btn btn-secondary" name="submit" value="Submit" onclick="">
 
 
 
-   <button onclick="myCreateFunction()">Create row</button>
-   <button onclick="myDeleteFunction()">Delete row</button>
+   <button type="button" class="btn btn-secondary" onclick="myCreateFunction()">Create row</button>
+   <button type="button" class="btn btn-secondary" onclick="myDeleteFunction()">Delete row</button>
 
 <script>
 function myCreateFunction() {
