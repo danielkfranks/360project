@@ -180,65 +180,16 @@
 	</td>
         <td><input type="text" style=""></td>
       </tr>
-      <tr>
-      <td><input type="text" style=""></td>
-        <td><input type="radio" name="truefalse2" value="true"></td>
-	<td><input type="radio" name="truefalse2" value="false"></td>
-	<td>
-	  <input type="checkbox" name="tuples" id="t1" value="t1">
-	  <label for="t1">T1</label><br>
-	  <input type="checkbox" name="tuples" id="t2" value="t2">
-	  <label for="t2">T2</label><br>
-	  <input type="checkbox" name="tuples" id="t3" value="t3">
-	  <label for="t3">T3</label><br>
-        </td>
-	<!-- td > 
-	  <div class="btn-group-vertical ">
-	    <label  class="btn btn-secondary ">
-	      <input type="checkbox" class="btn-check" name="tuples" id="t1" value="t1">T1
-	    </label>
-	    <label  class="btn btn-secondary">
-	      <input type="checkbox" class="btn-check" name="tuples" id="t2" value="t2">T2
-	    </label>
-	    <label  class="btn btn-secondary">
-	      <input type="checkbox" class="btn-check" name="tuples" id="t3" value="t3">T3
-	    </label>
-	  </div>
-	</td>
-	<td >
-	 <div class="btn-group-vertical">
-	   <button type="button" class="btn btn-secondary">button</button> 
-	   <button type="button" class="btn btn-secondary">button</button> 
-	   <button type="button" class="btn btn-secondary">button</button> 
-	  </div>
-	</td -->
-	<td>
-	  <input type="checkbox" name="tuples" id="A" value="A">
-	  <label for="A">A</label><br>
-	  <input type="checkbox" name="tuples" id="B" value="B">
-	  <label for="B">B</label><br>
-	  <input type="checkbox" name="tuples" id="C" value="C">
-	  <label for="C">C</label><br>
-	</td>
-	<td>
-	  <input type="checkbox" name="tuples" id="A" value="A">
-	  <label for="A">A</label><br>
-	  <input type="checkbox" name="tuples" id="B" value="B">
-	  <label for="B">B</label><br>
-	  <input type="checkbox" name="tuples" id="C" value="C">
-	  <label for="C">C</label><br>
-	</td>
-        <td><input type="text" style=""></td>
-      </tr>
 
     </table>
 
-   <input type="button" class="btn btn-secondary" name="submit" value="Submit" onclick="">
+    <input type="button" class="btn btn-secondary" name="submit" value="Submit" onclick="">
 
 
 
    <button type="button" class="btn btn-secondary" onclick="myCreateFunction()">Create row</button>
    <button type="button" class="btn btn-secondary" onclick="myDeleteFunction()">Delete row</button>
+
 
 <script>
 function myCreateFunction() {
@@ -246,8 +197,18 @@ function myCreateFunction() {
   var row = table.insertRow(-1);
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
-  cell1.innerHTML = <input type="text" style="">;
-  cell2.innerHTML = "NEW CELL2";
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  var cell7 = row.insertCell(6);
+  cell1.innerHTML = '<td><input type="text" style=""></td>';
+  cell2.innerHTML = '<td><input type="radio" name="truefalse" value="true"></td>';
+  cell3.innerHTML = '<td><input type="radio" name="truefalse" value="false"></td>';
+  cell4.innerHTML = '<td><input type="checkbox" name="tuples" id="t1" value="t1"><label for="t1">T1</label><br><input type="checkbox" name="tuples" id="t2" value="t2"><label for="t2">T2</label><br><input type="checkbox" name="tuples" id="t3" value="t3"><label for="t3">T3</label><br></td>';
+  cell5.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"><label for="A">A</label><br><input type="checkbox" name="tuples" id="B" value="B"><label for="B">B</label><br><input type="checkbox" name="tuples" id="C" value="C"><label for="C">C</label><br></td>';
+  cell6.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"><label for="A">A</label><br><input type="checkbox" name="tuples" id="B" value="B"><label for="B">B</label><br><input type="checkbox" name="tuples" id="C" value="C"><label for="C">C</label><br></td>';
+  cell7.innerHTML = '<td><input type="text" style=""></td>';
 }
 
 function myDeleteFunction() {
@@ -255,7 +216,7 @@ function myDeleteFunction() {
 }
 </script>
 
-  <a href="index.php" class="btn btn-primary">Student View</a>
+<a href="index.php" class="btn btn-primary">Student View</a>
 
   </body>
 </html>
