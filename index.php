@@ -189,5 +189,7 @@
          </td>
       </tr>
     </table>
+
+    <a href="teacher.php" class="btn btn-primary">Teacher view</a>
   </body>
 </html>
