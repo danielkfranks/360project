@@ -20,8 +20,6 @@
          <td>A</td>
          <td>B</td>
          <td>C</td>
-         <td>D</td>
-         <td>E</td>
       </tr>
       <tr>
          <td>t_1</td>
@@ -44,20 +42,6 @@
                <option>c_1</option>
                <option>c_2</option>
                <option>c_3</option>
-            </select>
-         </td>
-         <td>
-            <select>
-               <option>d_1</option>
-               <option>d_2</option>
-               <option>d_3</option>
-            </select>
-         </td>
-         <td>
-            <select>
-               <option>e_1</option>
-               <option>e_2</option>
-               <option>e_3</option>
             </select>
          </td>
       </tr>
@@ -84,20 +68,6 @@
                <option>c_3</option>
             </select>
          </td>
-         <td>
-            <select>
-               <option>d_1</option>
-               <option>d_2</option>
-               <option>d_3</option>
-            </select>
-         </td>
-         <td>
-            <select>
-               <option>e_1</option>
-               <option>e_2</option>
-               <option>e_3</option>
-            </select>
-         </td>
       </tr>
       <tr>
          <td>t_3</td>
@@ -122,20 +92,6 @@
                <option>c_3</option>
             </select>
          </td>
-         <td>
-            <select>
-               <option>d_1</option>
-               <option>d_2</option>
-               <option>d_3</option>
-            </select>
-         </td>
-         <td>
-            <select>
-               <option>e_1</option>
-               <option>e_2</option>
-               <option>e_3</option>
-            </select>
-         </td>
       </tr>
     </table>
     
@@ -156,34 +112,34 @@
         <td><input type="radio" name="truefalse" value="false"></td>
 	<td>
 	  <input type="checkbox" name="tuples" id="t1" value="t1">
-	  <label for="t1">T1</label><br>
+	  <label>T1</label><br>
 	  <input type="checkbox" name="tuples" id="t2" value="t2">
-	  <label for="t2">T2</label><br>
+	  <label>T2</label><br>
 	  <input type="checkbox" name="tuples" id="t3" value="t3">
-	  <label for="t3">T3</label><br>
+	  <label>T3</label><br>
         </td>
 	<td>
 	  <input type="checkbox" name="tuples" id="A" value="A">
-	  <label for="A">A</label><br>
+	  <label>A</label><br>
 	  <input type="checkbox" name="tuples" id="B" value="B">
-	  <label for="B">B</label><br>
+	  <label>B</label><br>
 	  <input type="checkbox" name="tuples" id="C" value="C">
-	  <label for="C">C</label><br>
+	  <label>C</label><br>
 	</td>
 	<td>
 	  <input type="checkbox" name="tuples" id="A" value="A">
-	  <label for="A">A</label><br>
+	  <label>A</label><br>
 	  <input type="checkbox" name="tuples" id="B" value="B">
-	  <label for="B">B</label><br>
+	  <label>B</label><br>
 	  <input type="checkbox" name="tuples" id="C" value="C">
-	  <label for="C">C</label><br>
+	  <label>C</label><br>
 	</td>
         <td><input type="text" style=""></td>
       </tr>
 
     </table>
 
-    <input type="button" class="btn btn-secondary" name="submit" value="Submit" onclick="">
+    <input type="button" class="btn btn-secondary" name="submit" value="Submit" onclick="window.location.reload()">
 
 
 
@@ -205,9 +161,9 @@ function myCreateFunction() {
   cell1.innerHTML = '<td><input type="text" style=""></td>';
   cell2.innerHTML = '<td><input type="radio" name="truefalse" value="true"></td>';
   cell3.innerHTML = '<td><input type="radio" name="truefalse" value="false"></td>';
-  cell4.innerHTML = '<td><input type="checkbox" name="tuples" id="t1" value="t1"><label for="t1">T1</label><br><input type="checkbox" name="tuples" id="t2" value="t2"><label for="t2">T2</label><br><input type="checkbox" name="tuples" id="t3" value="t3"><label for="t3">T3</label><br></td>';
-  cell5.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"><label for="A">A</label><br><input type="checkbox" name="tuples" id="B" value="B"><label for="B">B</label><br><input type="checkbox" name="tuples" id="C" value="C"><label for="C">C</label><br></td>';
-  cell6.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"><label for="A">A</label><br><input type="checkbox" name="tuples" id="B" value="B"><label for="B">B</label><br><input type="checkbox" name="tuples" id="C" value="C"><label for="C">C</label><br></td>';
+  cell4.innerHTML = '<td><input type="checkbox" name="tuples" id="t1" value="t1"> <label>T1</label><br><input type="checkbox" name="tuples" id="t2" value="t2"> <label>T2</label><br><input type="checkbox" name="tuples" id="t3" value="t3"> <label">T3</label><br></td>';
+  cell5.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"> <label>A</label><br><input type="checkbox" name="tuples" id="B" value="B"> <label>B</label><br><input type="checkbox" name="tuples" id="C" value="C"> <label>C</label><br></td>';
+  cell6.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"> <label>A</label><br><input type="checkbox" name="tuples" id="B" value="B"> <label>B</label><br><input type="checkbox" name="tuples" id="C" value="C"> <label>C</label><br></td>';
   cell7.innerHTML = '<td><input type="text" style=""></td>';
 }
 
