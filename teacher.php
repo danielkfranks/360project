@@ -13,7 +13,134 @@
   </head>
   <body>
     <h2> There's a lot of existing Project360 code and styles here that we don't have access to yet </h2>
-    <table class="table col-8 table-bordered">
+    
+    <table class = "table table-bordered table-sm col-md-2">
+      <tr> 
+         <td></td>
+         <td>A</td>
+         <td>B</td>
+         <td>C</td>
+         <td>D</td>
+         <td>E</td>
+      </tr>
+      <tr>
+         <td>t_1</td>
+         <td>
+            <select>
+               <option>a_1</option>
+               <option>a_2</option>
+               <option>a_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>b_1</option>
+               <option>b_2</option>
+               <option>b_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>c_1</option>
+               <option>c_2</option>
+               <option>c_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>d_1</option>
+               <option>d_2</option>
+               <option>d_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>e_1</option>
+               <option>e_2</option>
+               <option>e_3</option>
+            </select>
+         </td>
+      </tr>
+      <tr>
+         <td>t_2</td>
+         <td>
+            <select>
+               <option>a_1</option>
+               <option>a_2</option>
+               <option>a_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>b_1</option>
+               <option>b_2</option>
+               <option>b_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>c_1</option>
+               <option>c_2</option>
+               <option>c_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>d_1</option>
+               <option>d_2</option>
+               <option>d_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>e_1</option>
+               <option>e_2</option>
+               <option>e_3</option>
+            </select>
+         </td>
+      </tr>
+      <tr>
+         <td>t_3</td>
+         <td>
+            <select>
+               <option>a_1</option>
+               <option>a_2</option>
+               <option>a_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>b_1</option>
+               <option>b_2</option>
+               <option>b_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>c_1</option>
+               <option>c_2</option>
+               <option>c_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>d_1</option>
+               <option>d_2</option>
+               <option>d_3</option>
+            </select>
+         </td>
+         <td>
+            <select>
+               <option>e_1</option>
+               <option>e_2</option>
+               <option>e_3</option>
+            </select>
+         </td>
+      </tr>
+    </table>
+    
+    
+    <table class="table col-8 table-bordered" id="myTable">
       <tr>
         <th>Functional Dependency</th>
         <th>True</th>
@@ -22,10 +149,9 @@
         <th>LHS Columns</th>
 	<th>RHS Columns</th>
         <th>Observation</th>
-        <th>Active</th>
       </tr>
       <tr>
-        <td>AB -> C</td>
+      <td><input type="text" style=""></td>
         <td><input type="radio" name="truefalse" value="true"></td>
         <td><input type="radio" name="truefalse" value="false"></td>
 	<td>
@@ -53,10 +179,9 @@
 	  <label for="C">C</label><br>
 	</td>
         <td><input type="text" style=""></td>
-	<td><input type="radio" name="active" value="1"></td>
       </tr>
       <tr>
-        <td>B -> A</td>
+      <td><input type="text" style=""></td>
         <td><input type="radio" name="truefalse2" value="true"></td>
 	<td><input type="radio" name="truefalse2" value="false"></td>
 	<td>
@@ -104,90 +229,33 @@
 	  <label for="C">C</label><br>
 	</td>
         <td><input type="text" style=""></td>
-	<td><input type="radio" name="active" value="1"></td>
       </tr>
 
     </table>
 
-    </table>
+   <input type="button" name="submit" value="Submit" onclick="">
 
-    <table class = "table table-bordered table-sm col-md-2">
-      <tr> 
-         <td></td>
-         <td>A</td>
-         <td>B</td>
-         <td>C</td>
-      </tr>
-      <tr>
-         <td>t_1</td>
-         <td>
-            <select>
-               <option>a_1</option>
-               <option>a_2</option>
-               <option>a_3</option>
-            </select>
-         </td>
-         <td>
-            <select>
-               <option>b_1</option>
-               <option>b_2</option>
-               <option>b_3</option>
-            </select>
-         </td>
-         <td>
-            <select>
-               <option>c_1</option>
-               <option>c_2</option>
-               <option>c_3</option>
-            </select>
-      </tr>
-      <tr>
-         <td>t_2</td>
-         <td>
-            <select>
-               <option>a_1</option>
-               <option>a_2</option>
-               <option>a_3</option>
-            </select>
-         </td>
-         <td>
-            <select>
-               <option>b_1</option>
-               <option>b_2</option>
-               <option>b_3</option>
-            </select>
-         </td>
-         <td>
-            <select>
-               <option>c_1</option>
-               <option>c_2</option>
-               <option>c_3</option>
-            </select>
-      </tr>
-      <tr>
-         <td>t_3</td>
-         <td>
-            <select>
-               <option>a_1</option>
-               <option>a_2</option>
-               <option>a_3</option>
-            </select>
-         </td>
-         <td>
-            <select>
-               <option>b_1</option>
-               <option>b_2</option>
-               <option>b_3</option>
-            </select>
-         </td>
-         <td>
-            <select>
-               <option>c_1</option>
-               <option>c_2</option>
-               <option>c_3</option>
-            </select>
-         </td>
-      </tr>
-    </table>
+
+
+   <button onclick="myCreateFunction()">Create row</button>
+   <button onclick="myDeleteFunction()">Delete row</button>
+
+<script>
+function myCreateFunction() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(-1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = <input type="text" style="">;
+  cell2.innerHTML = "NEW CELL2";
+}
+
+function myDeleteFunction() {
+  document.getElementById("myTable").deleteRow(-1);
+}
+</script>
+
+
+
   </body>
 </html>
