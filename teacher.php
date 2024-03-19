@@ -255,7 +255,7 @@ function myDeleteFunction() {
 }
 </script>
 
-
+  <a href="index.php" class="btn btn-primary">Student View</a>
 
   </body>
 </html>
