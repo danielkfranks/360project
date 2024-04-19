@@ -148,6 +148,7 @@
 
 
 <script>
+   i = 0;
 function myCreateFunction() {
   var table = document.getElementById("myTable");
   var row = table.insertRow(-1);
@@ -159,12 +160,13 @@ function myCreateFunction() {
   var cell6 = row.insertCell(5);
   var cell7 = row.insertCell(6);
   cell1.innerHTML = '<td><input type="text" style=""></td>';
-  cell2.innerHTML = '<td><input type="radio" name="truefalse" value="true"></td>';
-  cell3.innerHTML = '<td><input type="radio" name="truefalse" value="false"></td>';
+  cell2.innerHTML = '<td><input type="radio" name="truefalse_' + i + '" value="true"></td>';
+  cell3.innerHTML = '<td><input type="radio" name="truefalse_' + i + '" value="false"></td>';
   cell4.innerHTML = '<td><input type="checkbox" name="tuples" id="t1" value="t1"> <label>T1</label><br><input type="checkbox" name="tuples" id="t2" value="t2"> <label>T2</label><br><input type="checkbox" name="tuples" id="t3" value="t3"> <label">T3</label><br></td>';
   cell5.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"> <label>A</label><br><input type="checkbox" name="tuples" id="B" value="B"> <label>B</label><br><input type="checkbox" name="tuples" id="C" value="C"> <label>C</label><br></td>';
   cell6.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"> <label>A</label><br><input type="checkbox" name="tuples" id="B" value="B"> <label>B</label><br><input type="checkbox" name="tuples" id="C" value="C"> <label>C</label><br></td>';
   cell7.innerHTML = '<td><input type="text" style=""></td>';
+  i++;
 }
 
 function myDeleteFunction() {
