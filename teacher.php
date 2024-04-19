@@ -14,6 +14,23 @@
   <body>
     <h2> There's a lot of existing Project360 code and styles here that we don't have access to yet </h2>
     
+   <?php 
+   $servername = "localhost";
+   $username = "root";
+   $password = "";
+   $dbname = "NoDD";
+
+   $conn = mysqli_connect($servername, $username, $password, $dbname);
+   if (!$conn) {
+     die("Connection failed: " . mysqli_connect_error());
+   }
+   
+
+
+   ?>
+
+<form method="POST" id="form1">
+
     <table class = "table table-bordered table-sm col-md-2">
       <tr> 
          <td></td>
@@ -107,45 +124,72 @@
         <th>Observation</th>
       </tr>
       <tr>
-      <td><input type="text" style=""></td>
+      <td><input type="text" style="" name="fd" value="<?php if (isset($_POST['fd'])) echo $_POST['fd']; ?>"></td>
         <td><input type="radio" name="truefalse" value="true"></td>
         <td><input type="radio" name="truefalse" value="false"></td>
 	<td>
-	  <input type="checkbox" name="tuples" id="t1" value="t1">
+	  <input type="checkbox" name="tuples1" id="t1" value="t1" <?php if (isset($_POST['tuples1'])) echo "checked='checked'"; ?>>
 	  <label>T1</label><br>
-	  <input type="checkbox" name="tuples" id="t2" value="t2">
+	  <input type="checkbox" name="tuples2" id="t2" value="t2" <?php if (isset($_POST['tuples2'])) echo "checked='checked'"; ?>>
 	  <label>T2</label><br>
-	  <input type="checkbox" name="tuples" id="t3" value="t3">
+	  <input type="checkbox" name="tuples3" id="t3" value="t3" <?php if (isset($_POST['tuples3'])) echo "checked='checked'"; ?>>
 	  <label>T3</label><br>
         </td>
 	<td>
-	  <input type="checkbox" name="tuples" id="A" value="A">
+	  <input type="checkbox" name="lhs1" id="A" value="A" <?php if (isset($_POST['lhs1'])) echo "checked='checked'"; ?>>
 	  <label>A</label><br>
-	  <input type="checkbox" name="tuples" id="B" value="B">
+	  <input type="checkbox" name="lhs2" id="B" value="B" <?php if (isset($_POST['lhs2'])) echo "checked='checked'"; ?>>
 	  <label>B</label><br>
-	  <input type="checkbox" name="tuples" id="C" value="C">
+	  <input type="checkbox" name="lhs3" id="C" value="C" <?php if (isset($_POST['lhs3'])) echo "checked='checked'"; ?>>
 	  <label>C</label><br>
 	</td>
 	<td>
-	  <input type="checkbox" name="tuples" id="A" value="A">
+	  <input type="checkbox" name="rhs1" id="A" value="A" <?php if (isset($_POST['rhs1'])) echo "checked='checked'"; ?>>
 	  <label>A</label><br>
-	  <input type="checkbox" name="tuples" id="B" value="B">
+	  <input type="checkbox" name="rhs2" id="B" value="B" <?php if (isset($_POST['rhs2'])) echo "checked='checked'"; ?>>
 	  <label>B</label><br>
-	  <input type="checkbox" name="tuples" id="C" value="C">
+	  <input type="checkbox" name="rhs3" id="C" value="C" <?php if (isset($_POST['rhs3'])) echo "checked='checked'"; ?>>
 	  <label>C</label><br>
 	</td>
-        <td><input type="text" style=""></td>
+        <td><input type="text" name="obs" style="" value="<?php if (isset($_POST['obs'])) echo $_POST['obs']; ?>"></td>
       </tr>
 
     </table>
 
-    <input type="button" class="btn btn-secondary" name="submit" value="Submit" onclick="window.location.reload()">
+      <label for="pnum">Problem Number:</label>
+      <input type="text" id="pnum" name="pnum" value="<?php if (isset($_POST['pnum'])) echo $_POST['pnum']; ?>"><br><br>
+      
+</form>
+
+    <button type="submit" class="btn btn-secondary" form="form1" name="submit" onclick="insert_problem()">Submit</button>
 
 
 
    <button type="button" class="btn btn-secondary" onclick="myCreateFunction()">Create row</button>
    <button type="button" class="btn btn-secondary" onclick="myDeleteFunction()">Delete row</button>
 
+
+   <p>
+      <?php
+         $pnum = $_POST['pnum'];
+         $obs = $_POST['obs'];
+         $fd = $_POST['fd'];
+         $tuples1 = $_POST['tuples1'];
+         $tuples2 = $_POST['tuples2'];
+         $tuples3 = $_POST['tuples3'];
+         $lhs1 = $_POST['lhs1'];
+         $lhs2 = $_POST['lhs2'];
+         $lhs3 = $_POST['lhs3'];
+         $rhs1 = $_POST['rhs1'];
+         $rhs2 = $_POST['rhs2'];
+         $rhs3 = $_POST['rhs3'];
+         if($_POST['truefalse'] == 'true'){
+            $choice = 1;
+         }else{
+            $choice = 0;
+         }
+      ?>
+   </p>
 
 <script>
    i = 0;
@@ -171,6 +215,13 @@ function myCreateFunction() {
 
 function myDeleteFunction() {
   document.getElementById("myTable").deleteRow(-1);
+}
+
+function insert_problem(){
+   <?php
+   $sql = "INSERT INTO `Teacher` (`pnum`, `obs`, `fd`, `choice`, `Tuples1`, `Tuples2`, `Tuples3`, `Lhs1`, `Lhs2`, `Lhs3`, `Rhs1`, `Rhs2`, `Rhs3`) VALUES ('$pnum', '$obs', '$fd', '$choice', '$tuples1', '$tuples2', '$tuples3', '$lhs1', '$lhs2', '$lhs3', '$rhs1', '$rhs2', '$rhs3')";
+   $rs = mysqli_query($conn, $sql);
+   ?>
 }
 </script>
 
