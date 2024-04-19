@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<div id="testdiv"> </div>
+
+		<script>
+			window.addEventListener("load", () => {
+				fetch("db.php", { method: "POST" })
+					.then(res => res.text())
+					.then(txt => document.getElementById("testdiv").innerHTML = txt);
+
+			});
+		</script>
