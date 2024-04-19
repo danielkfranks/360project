@@ -9,7 +9,7 @@
 
 		<script>
 			window.addEventListener("load", () => {
-				fetch("db.php", { method: "POST" })
+				fetch("olddb.php", { method: "POST" })
 					.then(res => res.text())
 					.then(txt => document.getElementById("testdiv").innerHTML = txt);
 

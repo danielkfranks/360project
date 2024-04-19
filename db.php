@@ -12,21 +12,17 @@
 	  ]
   );
 
-  $index = 'C2'; /* update this on the go */
-  $values = array(
-	  ':index' => $index;
-  );
-
-  $query = "SELECT :index FROM Problems ORDER BY RAND() LIMIT 1";
-  
+  $index = 'C2';
 
   try{
-    $stmt = $pdo->prepare($query);
+    $stmt = $pdo->prepare("SELECT " . $index . " FROM Problems ORDER BY RAND() LIMIT 1");
     $stmt -> execute($values);
   } catch(PDOException $e) {
 	  echo 'Query error '. $e->getMessage();
 	  die();
   }
 
-  $out = $stmt -> fetch();
-  printf("<div>%d</div>", $out);
+  $out = $stmt -> fetchAll();
+  foreach($out as $o){
+	  printf("<div> %d </div>", $o['C2']);
+  }
