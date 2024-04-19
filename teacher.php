@@ -191,6 +191,8 @@
       ?>
    </p>
 
+   <a href="index.php" class="btn btn-primary">Student View</a>
+
 <script>
    i = 0;
 function myCreateFunction() {
@@ -225,7 +227,7 @@ function insert_problem(){
 }
 </script>
 
-<a href="index.php" class="btn btn-primary">Student View</a>
+
 
   </body>
 </html>
