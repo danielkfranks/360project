@@ -24,21 +24,21 @@
       <tr>
          <td>t_1</td>
          <td>
-            <select>
+            <select class="form-control form-control-sm">
                <option>a_1</option>
                <option>a_2</option>
                <option>a_3</option>
             </select>
          </td>
          <td>
-            <select>
+            <select class="form-control form-control-sm">
                <option>b_1</option>
                <option>b_2</option>
                <option>b_3</option>
             </select>
          </td>
          <td>
-            <select>
+            <select class="form-control form-control-sm">
                <option>c_1</option>
                <option>c_2</option>
                <option>c_3</option>
@@ -48,21 +48,21 @@
       <tr>
          <td>t_2</td>
          <td>
-            <select>
+            <select class="form-control form-control-sm">
                <option>a_1</option>
                <option>a_2</option>
                <option>a_3</option>
             </select>
          </td>
          <td>
-            <select>
+            <select class="form-control form-control-sm">
                <option>b_1</option>
                <option>b_2</option>
                <option>b_3</option>
             </select>
          </td>
          <td>
-            <select>
+            <select class="form-control form-control-sm">
                <option>c_1</option>
                <option>c_2</option>
                <option>c_3</option>
@@ -72,21 +72,21 @@
       <tr>
          <td>t_3</td>
          <td>
-            <select>
+            <select class="form-control form-control-sm">
                <option>a_1</option>
                <option>a_2</option>
                <option>a_3</option>
             </select>
          </td>
          <td>
-            <select>
+            <select class="form-control form-control-sm">
                <option>b_1</option>
                <option>b_2</option>
                <option>b_3</option>
             </select>
          </td>
          <td>
-            <select>
+            <select class="form-control form-control-sm">
                <option>c_1</option>
                <option>c_2</option>
                <option>c_3</option>

@@ -10,6 +10,15 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+			window.addEventListener("load", () => {
+				fetch("problemQuery.php", { method: "POST" })
+					.then(res => res.text())
+					.then(txt => document.getElementById("problem-stmt").innerHTML = txt);
+
+			});
+    </script>
   </head>
   <body>
     <h2> There's a lot of existing Project360 code and styles here that we don't have access to yet </h2>
@@ -111,83 +120,8 @@
 
     </table>
 
-    <table class = "table table-bordered table-sm col-md-2">
-      <tr> 
-         <td></td>
-         <td>A</td>
-         <td>B</td>
-         <td>C</td>
-      </tr>
-      <tr>
-         <td>t_1</td>
-	 <td>
-            <select class="form-control form-control-sm">
-               <option>a_1</option>
-               <option>a_2</option>
-               <option>a_3</option>
-            </select>
-         </td>
-         <td>
-            <select class="form-control form-control-sm">
-               <option>b_1</option>
-               <option>b_2</option>
-               <option>b_3</option>
-            </select>
-         </td>
-         <td>
-            <select class="form-control form-control-sm">
-               <option>c_1</option>
-               <option>c_2</option>
-               <option>c_3</option>
-            </select>
-      </tr>
-      <tr>
-         <td>t_2</td>
-         <td>
-            <select class="form-control form-control-sm">
-               <option>a_1</option>
-               <option>a_2</option>
-               <option>a_3</option>
-            </select>
-         </td>
-         <td>
-            <select class="form-control form-control-sm">
-               <option>b_1</option>
-               <option>b_2</option>
-               <option>b_3</option>
-            </select>
-         </td>
-         <td>
-            <select class="form-control form-control-sm">
-               <option>c_1</option>
-               <option>c_2</option>
-               <option>c_3</option>
-            </select>
-      </tr>
-      <tr>
-         <td>t_3</td>
-         <td>
-            <select class="form-control form-control-sm">
-               <option>a_1</option>
-               <option>a_2</option>
-               <option>a_3</option>
-            </select>
-         </td>
-         <td>
-            <select class="form-control form-control-sm">
-               <option>b_1</option>
-               <option>b_2</option>
-               <option>b_3</option>
-            </select>
-         </td>
-         <td>
-            <select class="form-control form-control-sm">
-               <option>c_1</option>
-               <option>c_2</option>
-               <option>c_3</option>
-            </select>
-         </td>
-      </tr>
+    <table class = "table table-bordered table-sm col-md-2" id="problem-stmt">
+      <!-- js puts things here LOL -->
     </table>
 
     <a href="teacher.php" class="btn btn-primary">Teacher view</a>
