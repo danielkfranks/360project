@@ -10,18 +10,48 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
 
-    <script>
+<script>
+			var numRecords;
+
+			function getRandomInt(min, max) {
+			    min = Math.ceil(min);
+			    max = Math.floor(max);
+			    return Math.floor(Math.random() * (max - min + 1)) + min;
+			} // from MDN
+			
 			window.addEventListener("load", () => {
-				fetch("problemQuery.php", { method: "POST" })
-					.then(res => res.text())
-					.then(txt => document.getElementById("problem-stmt").innerHTML = txt);
+				fetch("recordsQuery.php", { method: "POST" })
+					.then(res => res.json())
+					.then(res => {
+					    numRecords = res;
+					})
+					.then(() => {
+					var problem = getRandomInt(1, numRecords); // me when I 1-index
+					getProblem(problem);
+					});
+			//	fetch("problemQuery.php", { method: "POST" })
+			//		.then(res => res.text())
+			//		.then(txt => document.getElementById("problem-stmt").innerHTML = txt);
 
 			});
+
+
+
+			function getProblem(pid){
+				const xmlhttp = new XMLHttpRequest();
+				console.log(pid);
+				xmlhttp.onload = function() {
+					document.getElementById("problem-stmt").innerHTML = this.responseText;
+				}
+				xmlhttp.open("GET", "./getproblem.php?p=" + pid);
+				xmlhttp.send();
+			}
+
     </script>
   </head>
   <body>
-    <h2> There's a lot of existing Project360 code and styles here that we don't have access to yet </h2>
     <table class="table col-8 table-bordered">
       <tr>
         <th>Functional Dependency</th>
