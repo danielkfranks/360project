@@ -41,72 +41,72 @@
       <tr>
          <td>t_1</td>
          <td>
-            <select class="form-control form-control-sm">
-               <option>a_1</option>
-               <option>a_2</option>
-               <option>a_3</option>
+            <select name="a1" class="form-control form-control-sm">
+               <option value="1">a_1</option>
+               <option value="2">a_2</option>
+               <option value="3">a_3</option>
             </select>
          </td>
          <td>
-            <select class="form-control form-control-sm">
-               <option>b_1</option>
-               <option>b_2</option>
-               <option>b_3</option>
+            <select name="b1" class="form-control form-control-sm">
+               <option value="1">b_1</option>
+               <option value="2">b_2</option>
+               <option value="3">b_3</option>
             </select>
          </td>
          <td>
-            <select class="form-control form-control-sm">
-               <option>c_1</option>
-               <option>c_2</option>
-               <option>c_3</option>
+            <select name="c1" class="form-control form-control-sm">
+               <option value="1">c_1</option>
+               <option value="2">c_2</option>
+               <option value="3">c_3</option>
             </select>
          </td>
       </tr>
       <tr>
          <td>t_2</td>
          <td>
-            <select class="form-control form-control-sm">
-               <option>a_1</option>
-               <option>a_2</option>
-               <option>a_3</option>
+            <select name="a2" class="form-control form-control-sm">
+               <option value="1">a_1</option>
+               <option value="2">a_2</option>
+               <option value="3">a_3</option>
             </select>
          </td>
          <td>
-            <select class="form-control form-control-sm">
-               <option>b_1</option>
-               <option>b_2</option>
-               <option>b_3</option>
+            <select name="b2" class="form-control form-control-sm">
+               <option value="1">b_1</option>
+               <option value="2">b_2</option>
+               <option value="3">b_3</option>
             </select>
          </td>
          <td>
-            <select class="form-control form-control-sm">
-               <option>c_1</option>
-               <option>c_2</option>
-               <option>c_3</option>
+            <select name="c2" class="form-control form-control-sm">
+               <option value="1">c_1</option>
+               <option value="2">c_2</option>
+               <option value="3">c_3</option>
             </select>
          </td>
       </tr>
       <tr>
          <td>t_3</td>
          <td>
-            <select class="form-control form-control-sm">
-               <option>a_1</option>
-               <option>a_2</option>
-               <option>a_3</option>
+            <select name="a3" class="form-control form-control-sm">
+               <option value="1">a_1</option>
+               <option value="2">a_2</option>
+               <option value="3">a_3</option>
             </select>
          </td>
          <td>
-            <select class="form-control form-control-sm">
-               <option>b_1</option>
-               <option>b_2</option>
-               <option>b_3</option>
+            <select name="b3" class="form-control form-control-sm">
+               <option value="1">b_1</option>
+               <option value="2">b_2</option>
+               <option value="3">b_3</option>
             </select>
          </td>
          <td>
-            <select class="form-control form-control-sm">
-               <option>c_1</option>
-               <option>c_2</option>
-               <option>c_3</option>
+            <select name="c3" class="form-control form-control-sm">
+               <option value="1">c_1</option>
+               <option value="2">c_2</option>
+               <option value="3">c_3</option>
             </select>
          </td>
       </tr>
@@ -124,40 +124,40 @@
         <th>Observation</th>
       </tr>
       <tr>
-      <td><input type="text" style="" name="fd" value="<?php if (isset($_POST['fd'])) echo $_POST['fd']; ?>"></td>
+      <td><input type="text" style="" name="fd"></td>
         <td><input type="radio" name="truefalse" value="true"></td>
         <td><input type="radio" name="truefalse" value="false"></td>
 	<td>
-	  <input type="checkbox" name="tuples1" id="t1" value="t1" <?php if (isset($_POST['tuples1'])) echo "checked='checked'"; ?>>
+	  <input type="checkbox" name="tuples1" id="t1" value="t1">
 	  <label>T1</label><br>
-	  <input type="checkbox" name="tuples2" id="t2" value="t2" <?php if (isset($_POST['tuples2'])) echo "checked='checked'"; ?>>
+	  <input type="checkbox" name="tuples2" id="t2" value="t2">
 	  <label>T2</label><br>
-	  <input type="checkbox" name="tuples3" id="t3" value="t3" <?php if (isset($_POST['tuples3'])) echo "checked='checked'"; ?>>
+	  <input type="checkbox" name="tuples3" id="t3" value="t3">
 	  <label>T3</label><br>
         </td>
 	<td>
-	  <input type="checkbox" name="lhs1" id="A" value="A" <?php if (isset($_POST['lhs1'])) echo "checked='checked'"; ?>>
+	  <input type="checkbox" name="lhs1" id="A" value="A">
 	  <label>A</label><br>
-	  <input type="checkbox" name="lhs2" id="B" value="B" <?php if (isset($_POST['lhs2'])) echo "checked='checked'"; ?>>
+	  <input type="checkbox" name="lhs2" id="B" value="B">
 	  <label>B</label><br>
-	  <input type="checkbox" name="lhs3" id="C" value="C" <?php if (isset($_POST['lhs3'])) echo "checked='checked'"; ?>>
+	  <input type="checkbox" name="lhs3" id="C" value="C">
 	  <label>C</label><br>
 	</td>
 	<td>
-	  <input type="checkbox" name="rhs1" id="A" value="A" <?php if (isset($_POST['rhs1'])) echo "checked='checked'"; ?>>
+	  <input type="checkbox" name="rhs1" id="A" value="A">
 	  <label>A</label><br>
-	  <input type="checkbox" name="rhs2" id="B" value="B" <?php if (isset($_POST['rhs2'])) echo "checked='checked'"; ?>>
+	  <input type="checkbox" name="rhs2" id="B" value="B">
 	  <label>B</label><br>
-	  <input type="checkbox" name="rhs3" id="C" value="C" <?php if (isset($_POST['rhs3'])) echo "checked='checked'"; ?>>
+	  <input type="checkbox" name="rhs3" id="C" value="C">
 	  <label>C</label><br>
 	</td>
-        <td><input type="text" name="obs" style="" value="<?php if (isset($_POST['obs'])) echo $_POST['obs']; ?>"></td>
+        <td><input type="text" name="obs" style=""></td>
       </tr>
 
     </table>
 
       <label for="pnum">Problem Number:</label>
-      <input type="text" id="pnum" name="pnum" value="<?php if (isset($_POST['pnum'])) echo $_POST['pnum']; ?>"><br><br>
+      <input type="text" id="pnum" name="pnum"><br><br>
       
 </form>
 
@@ -188,6 +188,16 @@
          }else{
             $choice = 0;
          }
+
+         $a1 = $_POST['a1'];
+         $a2 = $_POST['a2'];
+         $a3 = $_POST['a3'];
+         $b1 = $_POST['b1'];
+         $b2 = $_POST['b2'];
+         $b3 = $_POST['b3'];
+         $c1 = $_POST['c1'];
+         $c2 = $_POST['c2'];
+         $c3 = $_POST['c3'];
       ?>
    </p>
 
@@ -221,10 +231,17 @@ function myDeleteFunction() {
 
 function insert_problem(){
    <?php
+   $sql = "INSERT INTO `Problems` (`problem_id`, `A1`, `A2`, `A3`, `B1`, `B2`, `B3`, `C1`, `C2`, `C3`) VALUES ('$pnum', '$a1', '$a2', '$a3', '$b1', '$b2', '$b3', '$c1', '$c2', '$c3')";
+   $rs = mysqli_query($conn, $sql);
    $sql = "INSERT INTO `Teacher` (`pnum`, `obs`, `fd`, `choice`, `Tuples1`, `Tuples2`, `Tuples3`, `Lhs1`, `Lhs2`, `Lhs3`, `Rhs1`, `Rhs2`, `Rhs3`) VALUES ('$pnum', '$obs', '$fd', '$choice', '$tuples1', '$tuples2', '$tuples3', '$lhs1', '$lhs2', '$lhs3', '$rhs1', '$rhs2', '$rhs3')";
    $rs = mysqli_query($conn, $sql);
+   
    ?>
 }
+
+/*
+CREATE TABLE `NoDD`.`Teacher` (`pnum` INT NOT NULL , `obs` VARCHAR(255) NOT NULL , `fd` VARCHAR(255) NOT NULL , `choice` INT NOT NULL , `tuples1` VARCHAR(5) NOT NULL , `tuples2` VARCHAR(5) NOT NULL , `tuples3` VARCHAR(5) NOT NULL , `lhs1` VARCHAR(5) NOT NULL , `lhs2` VARCHAR(5) NOT NULL , `lhs3` VARCHAR(5) NOT NULL , `rhs1` VARCHAR(5) NOT NULL , `rhs2` VARCHAR(5) NOT NULL , `rhs3` VARCHAR(5) NOT NULL ) ENGINE = InnoDB;
+*/
 </script>
 
 

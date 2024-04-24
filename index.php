@@ -148,7 +148,7 @@
 
     </table>
 
-    </table>
+    
 
     <table class = "table table-bordered table-sm col-md-2" id="problem-stmt">
       <!-- js puts things here LOL -->
