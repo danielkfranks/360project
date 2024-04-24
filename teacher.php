@@ -12,7 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-    <h2> There's a lot of existing Project360 code and styles here that we don't have access to yet </h2>
     
    <?php 
    $servername = "localhost";
