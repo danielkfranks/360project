@@ -49,6 +49,18 @@
 				xmlhttp.send();
 			}
 
+			function getSolution(pid){
+				const xmlhttp = new XMLHttpRequest();
+				console.log(pid);
+				xmlhttp.onload = function() {
+					document.getElementById("fd_def").innerHTML = this.responseText;
+					var mySolution = JSON.parse(this.responseText); // ok hopefully we can play with it now
+					document.getElementById("fd_def").innerHTML = mySolution;
+				}
+				xmlhttp.open("GET", "./getsolution.php?p=" + pid);
+				xmlhttp.send();
+			}
+
     </script>
   </head>
   <body>
@@ -64,7 +76,7 @@
         <th>Active</th>
       </tr>
       <tr>
-        <td>AB -> C</td>
+        <td id="fd_def"></td>
         <td><input type="radio" name="truefalse" value="true"></td>
         <td><input type="radio" name="truefalse" value="false"></td>
 	<td>
