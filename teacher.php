@@ -28,7 +28,7 @@
 
    ?>
 
-<form method="POST" id="form1">
+<form method="POST" id="form1" lass="needs-validation">
 
     <table class = "table table-bordered table-sm col-md-2">
       <tr> 
@@ -38,7 +38,7 @@
          <td>C</td>
       </tr>
       <tr>
-         <td>t_1</td>
+         <td>t<sub>1</sub></td>
          <td>
             <select name="a1" class="form-control form-control-sm">
                <option value="1">a_1</option>
@@ -62,7 +62,7 @@
          </td>
       </tr>
       <tr>
-         <td>t_2</td>
+         <td>t<sub>2</sub></td>
          <td>
             <select name="a2" class="form-control form-control-sm">
                <option value="1">a_1</option>
@@ -86,7 +86,7 @@
          </td>
       </tr>
       <tr>
-         <td>t_3</td>
+         <td>t<sub>3</sub></td>
          <td>
             <select name="a3" class="form-control form-control-sm">
                <option value="1">a_1</option>
@@ -123,16 +123,16 @@
         <th>Observation</th>
       </tr>
       <tr>
-      <td><input type="text" style="" name="fd"></td>
+      <td><input type="text" style="" name="fd" required></td>
         <td><input type="radio" name="truefalse" value="true"></td>
         <td><input type="radio" name="truefalse" value="false"></td>
 	<td>
 	  <input type="checkbox" name="tuples1" id="t1" value="t1">
-	  <label>T1</label><br>
+	  <label>t<sub>1</sub></label><br>
 	  <input type="checkbox" name="tuples2" id="t2" value="t2">
-	  <label>T2</label><br>
+	  <label>t<sub>2</sub></label><br>
 	  <input type="checkbox" name="tuples3" id="t3" value="t3">
-	  <label>T3</label><br>
+	  <label>t<sub>3</sub></label><br>
         </td>
 	<td>
 	  <input type="checkbox" name="lhs1" id="A" value="A">
@@ -150,13 +150,13 @@
 	  <input type="checkbox" name="rhs3" id="C" value="C">
 	  <label>C</label><br>
 	</td>
-        <td><input type="text" name="obs" style=""></td>
+        <td><input type="text" name="obs" style="" required></td>
       </tr>
 
     </table>
 
       <label for="pnum">Problem Number:</label>
-      <input type="text" id="pnum" name="pnum"><br><br>
+      <input type="text" id="pnum" name="pnum" required><br><br>
       
 </form>
 
@@ -204,7 +204,7 @@
 
 <script>
    i = 0;
-function myCreateFunction() {
+function myCreateFunction(){
   var table = document.getElementById("myTable");
   var row = table.insertRow(-1);
   var cell1 = row.insertCell(0);
@@ -217,24 +217,25 @@ function myCreateFunction() {
   cell1.innerHTML = '<td><input type="text" style=""></td>';
   cell2.innerHTML = '<td><input type="radio" name="truefalse_' + i + '" value="true"></td>';
   cell3.innerHTML = '<td><input type="radio" name="truefalse_' + i + '" value="false"></td>';
-  cell4.innerHTML = '<td><input type="checkbox" name="tuples" id="t1" value="t1"> <label>T1</label><br><input type="checkbox" name="tuples" id="t2" value="t2"> <label>T2</label><br><input type="checkbox" name="tuples" id="t3" value="t3"> <label">T3</label><br></td>';
+  cell4.innerHTML = '<td><input type="checkbox" name="tuples" id="t1" value="t1"> <label>t<sub>1</sub></label><br><input type="checkbox" name="tuples" id="t2" value="t2"> <label>t<sub>2</sub></label><br><input type="checkbox" name="tuples" id="t3" value="t3"> <label>t<sub>3</sub></label><br></td>';
   cell5.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"> <label>A</label><br><input type="checkbox" name="tuples" id="B" value="B"> <label>B</label><br><input type="checkbox" name="tuples" id="C" value="C"> <label>C</label><br></td>';
   cell6.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"> <label>A</label><br><input type="checkbox" name="tuples" id="B" value="B"> <label>B</label><br><input type="checkbox" name="tuples" id="C" value="C"> <label>C</label><br></td>';
   cell7.innerHTML = '<td><input type="text" style=""></td>';
   i++;
 }
 
-function myDeleteFunction() {
+function myDeleteFunction(){
   document.getElementById("myTable").deleteRow(-1);
 }
 
 function insert_problem(){
    <?php
+   /*
    $sql = "INSERT INTO `Problems` (`problem_id`, `A1`, `A2`, `A3`, `B1`, `B2`, `B3`, `C1`, `C2`, `C3`) VALUES ('$pnum', '$a1', '$a2', '$a3', '$b1', '$b2', '$b3', '$c1', '$c2', '$c3')";
    $rs = mysqli_query($conn, $sql);
    $sql = "INSERT INTO `Teacher` (`pnum`, `obs`, `fd`, `choice`, `Tuples1`, `Tuples2`, `Tuples3`, `Lhs1`, `Lhs2`, `Lhs3`, `Rhs1`, `Rhs2`, `Rhs3`) VALUES ('$pnum', '$obs', '$fd', '$choice', '$tuples1', '$tuples2', '$tuples3', '$lhs1', '$lhs2', '$lhs3', '$rhs1', '$rhs2', '$rhs3')";
    $rs = mysqli_query($conn, $sql);
-   
+   */
    ?>
 }
 

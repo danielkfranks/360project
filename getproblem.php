@@ -25,9 +25,9 @@
   $out = $stmt -> fetchAll();
   foreach($out as $o){
 	  printf(" <tr>\n<td></td><td>A</td><td>B</td><td>C</td></tr>\n
-<tr><td>1</td><td>%d</td><td>%d</td><td>%d</td></tr>\n
-<tr><td>2</td><td>%d</td><td>%d</td><td>%d</td></tr>\n
-<tr><td>3</td><td>%d</td><td>%d</td><td>%d</td></tr>\n
+<tr><td>t<sub>1</sub></td><td>%d</td><td>%d</td><td>%d</td></tr>\n
+<tr><td>t<sub>2</sub></td><td>%d</td><td>%d</td><td>%d</td></tr>\n
+<tr><td>t<sub>3</sub></td><td>%d</td><td>%d</td><td>%d</td></tr>\n
 <?php\n  $key=%d \n ?>
 ", $o['A1'], $o['A2'], $o['A3'], $o['B1'], $o['B2'], $o['B3'], $o['C1'], $o['C2'], $o['C3'], $o['problem_id']);
   }
