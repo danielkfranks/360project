@@ -13,22 +13,8 @@
   </head>
   <body>
     
-   <?php 
-   $servername = "localhost";
-   $username = "root";
-   $password = "";
-   $dbname = "NoDD";
 
-   $conn = mysqli_connect($servername, $username, $password, $dbname);
-   if (!$conn) {
-     die("Connection failed: " . mysqli_connect_error());
-   }
-   
-
-
-   ?>
-
-<form method="POST" id="form1" lass="needs-validation">
+<form method="POST" id="form1" class="needs-validation" action="submit.php">
 
     <table class = "table table-bordered table-sm col-md-2">
       <tr> 
@@ -123,34 +109,34 @@
         <th>Observation</th>
       </tr>
       <tr>
-      <td><input type="text" style="" name="fd" required></td>
-        <td><input type="radio" name="truefalse" value="true"></td>
-        <td><input type="radio" name="truefalse" value="false"></td>
+      <td><input type="text" style="" name="fd_0" required></td>
+        <td><input type="radio" name="truefalse_0" value="true"></td>
+        <td><input type="radio" name="truefalse_0" value="false"></td>
 	<td>
-	  <input type="checkbox" name="tuples1" id="t1" value="t1">
+	  <input type="checkbox" name="tuples1_0" id="t1" value="t1">
 	  <label>t<sub>1</sub></label><br>
-	  <input type="checkbox" name="tuples2" id="t2" value="t2">
+	  <input type="checkbox" name="tuples2_0" id="t2" value="t2">
 	  <label>t<sub>2</sub></label><br>
-	  <input type="checkbox" name="tuples3" id="t3" value="t3">
+	  <input type="checkbox" name="tuples3_0" id="t3" value="t3">
 	  <label>t<sub>3</sub></label><br>
         </td>
 	<td>
-	  <input type="checkbox" name="lhs1" id="A" value="A">
+	  <input type="checkbox" name="lhs1_0" id="A" value="A">
 	  <label>A</label><br>
-	  <input type="checkbox" name="lhs2" id="B" value="B">
+	  <input type="checkbox" name="lhs2_0" id="B" value="B">
 	  <label>B</label><br>
-	  <input type="checkbox" name="lhs3" id="C" value="C">
+	  <input type="checkbox" name="lhs3_0" id="C" value="C">
 	  <label>C</label><br>
 	</td>
 	<td>
-	  <input type="checkbox" name="rhs1" id="A" value="A">
+	  <input type="checkbox" name="rhs1_0" id="A" value="A">
 	  <label>A</label><br>
-	  <input type="checkbox" name="rhs2" id="B" value="B">
+	  <input type="checkbox" name="rhs2_0" id="B" value="B">
 	  <label>B</label><br>
-	  <input type="checkbox" name="rhs3" id="C" value="C">
+	  <input type="checkbox" name="rhs3_0" id="C" value="C">
 	  <label>C</label><br>
 	</td>
-        <td><input type="text" name="obs" style="" required></td>
+        <td><input type="text" name="obs_0" style="" required></td>
       </tr>
 
     </table>
@@ -160,7 +146,7 @@
       
 </form>
 
-    <button type="submit" class="btn btn-secondary" form="form1" name="submit" onclick="insert_problem()">Submit</button>
+    <button type="submit" class="btn btn-secondary" form="form1" name="submit">Submit</button>
 
 
 
@@ -169,41 +155,12 @@
 
 
    <p>
-      <?php
-         $pnum = $_POST['pnum'];
-         $obs = $_POST['obs'];
-         $fd = $_POST['fd'];
-         $tuples1 = $_POST['tuples1'];
-         $tuples2 = $_POST['tuples2'];
-         $tuples3 = $_POST['tuples3'];
-         $lhs1 = $_POST['lhs1'];
-         $lhs2 = $_POST['lhs2'];
-         $lhs3 = $_POST['lhs3'];
-         $rhs1 = $_POST['rhs1'];
-         $rhs2 = $_POST['rhs2'];
-         $rhs3 = $_POST['rhs3'];
-         if($_POST['truefalse'] == 'true'){
-            $choice = 1;
-         }else{
-            $choice = 0;
-         }
-
-         $a1 = $_POST['a1'];
-         $a2 = $_POST['a2'];
-         $a3 = $_POST['a3'];
-         $b1 = $_POST['b1'];
-         $b2 = $_POST['b2'];
-         $b3 = $_POST['b3'];
-         $c1 = $_POST['c1'];
-         $c2 = $_POST['c2'];
-         $c3 = $_POST['c3'];
-      ?>
    </p>
 
    <a href="index.php" class="btn btn-primary">Student View</a>
 
 <script>
-   i = 0;
+   i = 1;
 function myCreateFunction(){
   var table = document.getElementById("myTable");
   var row = table.insertRow(-1);
@@ -214,37 +171,25 @@ function myCreateFunction(){
   var cell5 = row.insertCell(4);
   var cell6 = row.insertCell(5);
   var cell7 = row.insertCell(6);
-  cell1.innerHTML = '<td><input type="text" style=""></td>';
+  cell1.innerHTML = '<td><input type="text" style="" name="fd_' + i + '" required></td>';
   cell2.innerHTML = '<td><input type="radio" name="truefalse_' + i + '" value="true"></td>';
   cell3.innerHTML = '<td><input type="radio" name="truefalse_' + i + '" value="false"></td>';
-  cell4.innerHTML = '<td><input type="checkbox" name="tuples" id="t1" value="t1"> <label>t<sub>1</sub></label><br><input type="checkbox" name="tuples" id="t2" value="t2"> <label>t<sub>2</sub></label><br><input type="checkbox" name="tuples" id="t3" value="t3"> <label>t<sub>3</sub></label><br></td>';
-  cell5.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"> <label>A</label><br><input type="checkbox" name="tuples" id="B" value="B"> <label>B</label><br><input type="checkbox" name="tuples" id="C" value="C"> <label>C</label><br></td>';
-  cell6.innerHTML = '<td><input type="checkbox" name="tuples" id="A" value="A"> <label>A</label><br><input type="checkbox" name="tuples" id="B" value="B"> <label>B</label><br><input type="checkbox" name="tuples" id="C" value="C"> <label>C</label><br></td>';
-  cell7.innerHTML = '<td><input type="text" style=""></td>';
+  cell4.innerHTML = '<td><input type="checkbox" name="tuples1_' + i + '" id="t1" value="t1"> <label>t<sub>1</sub></label><br><input type="checkbox" name="tuples2_' + i + '" id="t2" value="t2"> <label>t<sub>2</sub></label><br><input type="checkbox" name="tuples3_' + i + '" id="t3" value="t3"> <label>t<sub>3</sub></label><br></td>';
+  cell5.innerHTML = '<td><input type="checkbox" name="lhs1_' + i + '" id="A" value="A"> <label>A</label><br><input type="checkbox" name="lhs2_' + i + '" id="B" value="B"> <label>B</label><br><input type="checkbox" name="lhs3_' + i + '" id="C" value="C"> <label>C</label><br></td>';
+  cell6.innerHTML = '<td><input type="checkbox" name="rhs1_' + i + '" id="A" value="A"> <label>A</label><br><input type="checkbox" name="rhs2_' + i + '" id="B" value="B"> <label>B</label><br><input type="checkbox" name="rhs3_' + i + '" id="C" value="C"><label>C</label><br></td>';
+  cell7.innerHTML = '<td><input type="text" style="" name="obs_' + i + '" required></td>';
   i++;
 }
 
 function myDeleteFunction(){
   document.getElementById("myTable").deleteRow(-1);
-}
-
-function insert_problem(){
-   <?php
-   /*
-   $sql = "INSERT INTO `Problems` (`problem_id`, `A1`, `A2`, `A3`, `B1`, `B2`, `B3`, `C1`, `C2`, `C3`) VALUES ('$pnum', '$a1', '$a2', '$a3', '$b1', '$b2', '$b3', '$c1', '$c2', '$c3')";
-   $rs = mysqli_query($conn, $sql);
-   $sql = "INSERT INTO `Teacher` (`pnum`, `obs`, `fd`, `choice`, `Tuples1`, `Tuples2`, `Tuples3`, `Lhs1`, `Lhs2`, `Lhs3`, `Rhs1`, `Rhs2`, `Rhs3`) VALUES ('$pnum', '$obs', '$fd', '$choice', '$tuples1', '$tuples2', '$tuples3', '$lhs1', '$lhs2', '$lhs3', '$rhs1', '$rhs2', '$rhs3')";
-   $rs = mysqli_query($conn, $sql);
-   */
-   ?>
+  i--;
 }
 
 /*
 CREATE TABLE `NoDD`.`Teacher` (`pnum` INT NOT NULL , `obs` VARCHAR(255) NOT NULL , `fd` VARCHAR(255) NOT NULL , `choice` INT NOT NULL , `tuples1` VARCHAR(5) NOT NULL , `tuples2` VARCHAR(5) NOT NULL , `tuples3` VARCHAR(5) NOT NULL , `lhs1` VARCHAR(5) NOT NULL , `lhs2` VARCHAR(5) NOT NULL , `lhs3` VARCHAR(5) NOT NULL , `rhs1` VARCHAR(5) NOT NULL , `rhs2` VARCHAR(5) NOT NULL , `rhs3` VARCHAR(5) NOT NULL ) ENGINE = InnoDB;
 */
 </script>
-
-
 
   </body>
 </html>
