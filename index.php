@@ -22,7 +22,7 @@
 			    max = Math.floor(max);
 			    return Math.floor(Math.random() * (max - min + 1)) + min;
 			} // from MDN
-			
+			/*
 			window.addEventListener("load", () => {
 				fetch("recordsQuery.php", { method: "POST" })
 					.then(res => res.json())
@@ -39,6 +39,7 @@
 			//		.then(txt => document.getElementById("problem-stmt").innerHTML = txt);
 
 			});
+         */
          
 
 
@@ -68,8 +69,8 @@
          function checkAnswer(){
             <?php
             $i = 0;
-            
-            while(isset($_POST['problem'])){
+            if(isset($_POST['obs'])){
+            while(isset($_POST['obs'])){
                echo "alert('Obs not correct')";
                $obs = $_POST["obs_$i"];
                $fd = $_POST["fd_$i"];
@@ -101,6 +102,9 @@
 
                $i = $i + 1;
             }
+         }else{
+            echo "alert('Unable to check against answer in the database!')";
+         }
             
             ?>
          }
@@ -131,7 +135,7 @@
         <select id="problem_id" name="problem_id">
           <?php
             while ($row = mysqli_fetch_assoc($result)) {
-              echo '<option value="', $row['problem_id'], '">', "Problem " . $row['problem_id'], '</option>'; //between <option></option> tags you can output something more human-friendly (like $row['name'], if table "problem_id" have one)
+              echo '<option value="', $row['problem_id'], '">', "Problem " . $row['problem_id'], '</option>'; 
             }
           ?>
         </select>
@@ -195,7 +199,7 @@
               <td><input type="checkbox" name="tuples1_' , $i , '" id="t1" value="t1"> <label>t<sub>1</sub></label><br><input type="checkbox" name="tuples2_' , $i , '" id="t2" value="t2"> <label>t<sub>2</sub></label><br><input type="checkbox" name="tuples3_' , $i , '" id="t3" value="t3"> <label>t<sub>3</sub></label><br></td>
               <td><input type="checkbox" name="lhs1_' , $i , '" id="A" value="A"> <label>A</label> <input type="checkbox" name="lhs2_' , $i , '" id="B" value="B"> <label>B</label><br><input type="checkbox" name="lhs3_' , $i , '" id="C" value="C"> <label>C</label> <input type="checkbox" name="lhs4_' , $i , '" id="D" value="D"> <label>D</label><br><input type="checkbox" name="lhs5_' , $i , '" id="E" value="E"> <label>E</label></td>     
               <td><input type="checkbox" name="rhs1_' , $i , '" id="A" value="A"> <label>A</label> <input type="checkbox" name="rhs2_' , $i , '" id="B" value="B"> <label>B</label><br><input type="checkbox" name="rhs3_' , $i , '" id="C" value="C"> <label>C</label> <input type="checkbox" name="rhs4_' , $i , '" id="D" value="D"> <label>D</label><br><input type="checkbox" name="rhs5_' , $i , '" id="E" value="E"> <label>E</label</td>
-              <td><input type="text" style="" name="obs_', $i, '" required></td>
+              <td><input type="text" style="" name="obs" required></td>
               <td><input type="radio" name="active" value="1"></td>';
               echo '</tr>';
               $i = $i + 1;
