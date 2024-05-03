@@ -14,7 +14,7 @@
 
 
   try{
-    $stmt = $pdo->prepare("SELECT COUNT(*) FROM Problems AS number");
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM Problem AS number");
     $stmt -> execute($values);
   } catch(PDOException $e) {
 	  echo 'Query error '. $e->getMessage();

@@ -16,34 +16,50 @@
 
 <form method="POST" id="form1" class="needs-validation" action="submit.php">
 
-    <table class = "table table-bordered table-sm col-md-2">
+    <table class = "table table-bordered table-sm col-sm-3">
       <tr> 
          <td></td>
          <td>A</td>
          <td>B</td>
          <td>C</td>
+         <td>D</td>
+         <td>E</td>
       </tr>
       <tr>
          <td>t<sub>1</sub></td>
          <td>
             <select name="a1" class="form-control form-control-sm">
-               <option value="1">a_1</option>
-               <option value="2">a_2</option>
-               <option value="3">a_3</option>
+               <option value="1">a&#x2081</option>
+               <option value="2">a&#x2082</option>
+               <option value="3">a&#x2083</option>
             </select>
          </td>
          <td>
             <select name="b1" class="form-control form-control-sm">
-               <option value="1">b_1</option>
-               <option value="2">b_2</option>
-               <option value="3">b_3</option>
+               <option value="1">b&#x2081</option>
+               <option value="2">b&#x2082</option>
+               <option value="3">b&#x2083</option>
             </select>
          </td>
          <td>
             <select name="c1" class="form-control form-control-sm">
-               <option value="1">c_1</option>
-               <option value="2">c_2</option>
-               <option value="3">c_3</option>
+               <option value="1">c&#x2081</option>
+               <option value="2">c&#x2082</option>
+               <option value="3">c&#x2083</option>
+            </select>
+         </td>
+         <td>
+            <select name="d1" class="form-control form-control-sm">
+               <option value="1">d&#x2081</option>
+               <option value="2">d&#x2082</option>
+               <option value="3">d&#x2083</option>
+            </select>
+         </td>
+         <td>
+            <select name="e1" class="form-control form-control-sm">
+               <option value="1">e&#x2081</option>
+               <option value="2">e&#x2082</option>
+               <option value="3">e&#x2083</option>
             </select>
          </td>
       </tr>
@@ -51,23 +67,37 @@
          <td>t<sub>2</sub></td>
          <td>
             <select name="a2" class="form-control form-control-sm">
-               <option value="1">a_1</option>
-               <option value="2">a_2</option>
-               <option value="3">a_3</option>
+               <option value="1">a&#x2081</option>
+               <option value="2">a&#x2082</option>
+               <option value="3">a&#x2083</option>
             </select>
          </td>
          <td>
             <select name="b2" class="form-control form-control-sm">
-               <option value="1">b_1</option>
-               <option value="2">b_2</option>
-               <option value="3">b_3</option>
+               <option value="1">b&#x2081</option>
+               <option value="2">b&#x2082</option>
+               <option value="3">b&#x2083</option>
             </select>
          </td>
          <td>
             <select name="c2" class="form-control form-control-sm">
-               <option value="1">c_1</option>
-               <option value="2">c_2</option>
-               <option value="3">c_3</option>
+               <option value="1">c&#x2081</option>
+               <option value="2">c&#x2082</option>
+               <option value="3">c&#x2083</option>
+            </select>
+         </td>
+         <td>
+            <select name="d2" class="form-control form-control-sm">
+               <option value="1">d&#x2081</option>
+               <option value="2">d&#x2082</option>
+               <option value="3">d&#x2083</option>
+            </select>
+         </td>
+         <td>
+            <select name="e2" class="form-control form-control-sm">
+               <option value="1">e&#x2081</option>
+               <option value="2">e&#x2082</option>
+               <option value="3">e&#x2083</option>
             </select>
          </td>
       </tr>
@@ -75,23 +105,37 @@
          <td>t<sub>3</sub></td>
          <td>
             <select name="a3" class="form-control form-control-sm">
-               <option value="1">a_1</option>
-               <option value="2">a_2</option>
-               <option value="3">a_3</option>
+               <option value="1">a&#x2081</option>
+               <option value="2">a&#x2082</option>
+               <option value="3">a&#x2083</option>
             </select>
          </td>
          <td>
             <select name="b3" class="form-control form-control-sm">
-               <option value="1">b_1</option>
-               <option value="2">b_2</option>
-               <option value="3">b_3</option>
+               <option value="1">b&#x2081</option>
+               <option value="2">b&#x2082</option>
+               <option value="3">b&#x2083</option>
             </select>
          </td>
          <td>
             <select name="c3" class="form-control form-control-sm">
-               <option value="1">c_1</option>
-               <option value="2">c_2</option>
-               <option value="3">c_3</option>
+               <option value="1">c&#x2081</option>
+               <option value="2">c&#x2082</option>
+               <option value="3">c&#x2083</option>
+            </select>
+         </td>
+         <td>
+            <select name="d3" class="form-control form-control-sm">
+               <option value="1">d&#x2081</option>
+               <option value="2">d&#x2082</option>
+               <option value="3">d&#x2083</option>
+            </select>
+         </td>
+         <td>
+            <select name="e3" class="form-control form-control-sm">
+               <option value="1">e&#x2081</option>
+               <option value="2">e&#x2082</option>
+               <option value="3">e&#x2083</option>
             </select>
          </td>
       </tr>
@@ -122,19 +166,28 @@
         </td>
 	<td>
 	  <input type="checkbox" name="lhs1_0" id="A" value="A">
-	  <label>A</label><br>
+	  <label>A</label>
 	  <input type="checkbox" name="lhs2_0" id="B" value="B">
 	  <label>B</label><br>
 	  <input type="checkbox" name="lhs3_0" id="C" value="C">
-	  <label>C</label><br>
+	  <label>C</label>
+     <input type="checkbox" name="lhs4_0" id="D" value="D">
+	  <label>D</label><br>
+     <input type="checkbox" name="lhs5_0" id="E" value="E">
+	  <label>E</label>
 	</td>
 	<td>
 	  <input type="checkbox" name="rhs1_0" id="A" value="A">
-	  <label>A</label><br>
+	  <label>A</label>
 	  <input type="checkbox" name="rhs2_0" id="B" value="B">
 	  <label>B</label><br>
 	  <input type="checkbox" name="rhs3_0" id="C" value="C">
-	  <label>C</label><br>
+	  <label>C</label>
+     <input type="checkbox" name="rhs4_0" id="D" value="D">
+	  <label>D</label><br>
+	  <input type="checkbox" name="rhs5_0" id="E" value="E">
+	  <label>E</label>
+     
 	</td>
         <td><input type="text" name="obs_0" style="" required></td>
       </tr>
@@ -175,8 +228,8 @@ function myCreateFunction(){
   cell2.innerHTML = '<td><input type="radio" name="truefalse_' + i + '" value="true"></td>';
   cell3.innerHTML = '<td><input type="radio" name="truefalse_' + i + '" value="false"></td>';
   cell4.innerHTML = '<td><input type="checkbox" name="tuples1_' + i + '" id="t1" value="t1"> <label>t<sub>1</sub></label><br><input type="checkbox" name="tuples2_' + i + '" id="t2" value="t2"> <label>t<sub>2</sub></label><br><input type="checkbox" name="tuples3_' + i + '" id="t3" value="t3"> <label>t<sub>3</sub></label><br></td>';
-  cell5.innerHTML = '<td><input type="checkbox" name="lhs1_' + i + '" id="A" value="A"> <label>A</label><br><input type="checkbox" name="lhs2_' + i + '" id="B" value="B"> <label>B</label><br><input type="checkbox" name="lhs3_' + i + '" id="C" value="C"> <label>C</label><br></td>';
-  cell6.innerHTML = '<td><input type="checkbox" name="rhs1_' + i + '" id="A" value="A"> <label>A</label><br><input type="checkbox" name="rhs2_' + i + '" id="B" value="B"> <label>B</label><br><input type="checkbox" name="rhs3_' + i + '" id="C" value="C"><label>C</label><br></td>';
+  cell5.innerHTML = '<td><input type="checkbox" name="lhs1_' + i + '" id="A" value="A"> <label>A</label> <input type="checkbox" name="lhs2_' + i + '" id="B" value="B"> <label>B</label><br><input type="checkbox" name="lhs3_' + i + '" id="C" value="C"> <label>C</label> <input type="checkbox" name="lhs4_' + i + '" id="D" value="D"> <label>D</label><br><input type="checkbox" name="lhs5_' + i + '" id="E" value="E"> <label>E</label></td>';
+  cell6.innerHTML = '<td><input type="checkbox" name="rhs1_' + i + '" id="A" value="A"> <label>A</label> <input type="checkbox" name="rhs2_' + i + '" id="B" value="B"> <label>B</label><br><input type="checkbox" name="rhs3_' + i + '" id="C" value="C"> <label>C</label> <input type="checkbox" name="rhs4_' + i + '" id="D" value="D"> <label>D</label><br><input type="checkbox" name="rhs5_' + i + '" id="E" value="E"> <label>E</label</td>';
   cell7.innerHTML = '<td><input type="text" style="" name="obs_' + i + '" required></td>';
   i++;
 }
@@ -186,8 +239,10 @@ function myDeleteFunction(){
   i--;
 }
 
-/*
-CREATE TABLE `NoDD`.`Teacher` (`pnum` INT NOT NULL , `obs` VARCHAR(255) NOT NULL , `fd` VARCHAR(255) NOT NULL , `choice` INT NOT NULL , `tuples1` VARCHAR(5) NOT NULL , `tuples2` VARCHAR(5) NOT NULL , `tuples3` VARCHAR(5) NOT NULL , `lhs1` VARCHAR(5) NOT NULL , `lhs2` VARCHAR(5) NOT NULL , `lhs3` VARCHAR(5) NOT NULL , `rhs1` VARCHAR(5) NOT NULL , `rhs2` VARCHAR(5) NOT NULL , `rhs3` VARCHAR(5) NOT NULL ) ENGINE = InnoDB;
+/*-------SQL to create both of the tables needed
+CREATE TABLE `NoDD`.`Teacher` (`pnum` INT NOT NULL , `obs` VARCHAR(255) NOT NULL , `fd` VARCHAR(255) NOT NULL , `choice` INT NOT NULL , `tuples1` VARCHAR(5) NOT NULL , `tuples2` VARCHAR(5) NOT NULL , `tuples3` VARCHAR(5) NOT NULL , `lhs1` VARCHAR(5) NOT NULL , `lhs2` VARCHAR(5) NOT NULL , `lhs3` VARCHAR(5) NOT NULL , `lhs4` VARCHAR(5) NOT NULL , `lhs5` VARCHAR(5) NOT NULL , `rhs1` VARCHAR(5) NOT NULL , `rhs2` VARCHAR(5) NOT NULL , `rhs3` VARCHAR(5) NOT NULL , `rhs4` VARCHAR(5) NOT NULL , `rhs5` VARCHAR(5) NOT NULL ) ENGINE = InnoDB;
+CREATE TABLE `NoDD`.`Problems` (`problem_id` INT(11) NOT NULL , `A1` INT(11) NOT NULL , `A2` INT(11) NOT NULL , `A3` INT(11) NOT NULL , `B1` INT(11) NOT NULL , `B2` INT(11) NOT NULL , `B3` INT(11) NOT NULL , `C1` INT(11) NOT NULL , `C2` INT(11) NOT NULL , `C3` INT(11) NOT NULL , `D1` INT(11) NOT NULL , `D2` INT(11) NOT NULL , `D3` INT(11) NOT NULL , `E1` INT(11) NOT NULL , `E2` INT(11) NOT NULL , `E3` INT(11) NOT NULL ) ENGINE = InnoDB;
+ALTER TABLE `Problems` ADD PRIMARY KEY(`problem_id`);
 */
 </script>
 

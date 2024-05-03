@@ -13,6 +13,7 @@
     <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
 
 <script>
+   
 			var numRecords;
 
 			function getRandomInt(min, max) {
@@ -30,6 +31,7 @@
 					.then(() => {
 					var problem = getRandomInt(1, numRecords); // me when I 1-index
 					getProblem(problem);
+               createTable(problem);
 					});
 			//	fetch("problemQuery.php", { method: "POST" })
 			//		.then(res => res.text())
@@ -49,111 +51,43 @@
 				xmlhttp.send();
 			}
 
+
+         function createTable(pid){
+            const xmlhttp = new XMLHttpRequest();
+				console.log(pid);
+				xmlhttp.onload = function() {
+					document.getElementById("myTable").innerHTML = this.responseText;
+				}
+				xmlhttp.open("GET", "./getdependency.php?p=" + pid);
+				xmlhttp.send();
+         }
+         
     </script>
+
+
+
+
   </head>
   <body>
-    <table class="table col-8 table-bordered">
-      <tr>
-        <th>Functional Dependency</th>
-        <th>True</th>
-        <th>False</th>
-        <th>Tuples</th>
-        <th>LHS Columns</th>
-	<th>RHS Columns</th>
-        <th>Observation</th>
-        <th>Active</th>
-      </tr>
-      <tr>
-        <td>AB -> C</td>
-        <td><input type="radio" name="truefalse" value="true"></td>
-        <td><input type="radio" name="truefalse" value="false"></td>
-	<td>
-	  <input type="checkbox" name="tuples" id="t1" value="t1">
-	  <label for="t1">T1</label><br>
-	  <input type="checkbox" name="tuples" id="t2" value="t2">
-	  <label for="t2">T2</label><br>
-	  <input type="checkbox" name="tuples" id="t3" value="t3">
-	  <label for="t3">T3</label><br>
-        </td>
-	<td>
-	  <input type="checkbox" name="tuples" id="A" value="A">
-	  <label for="A">A</label><br>
-	  <input type="checkbox" name="tuples" id="B" value="B">
-	  <label for="B">B</label><br>
-	  <input type="checkbox" name="tuples" id="C" value="C">
-	  <label for="C">C</label><br>
-	</td>
-	<td>
-	  <input type="checkbox" name="tuples" id="A" value="A">
-	  <label for="A">A</label><br>
-	  <input type="checkbox" name="tuples" id="B" value="B">
-	  <label for="B">B</label><br>
-	  <input type="checkbox" name="tuples" id="C" value="C">
-	  <label for="C">C</label><br>
-	</td>
-        <td><input type="text" style=""></td>
-	<td><input type="radio" name="active" value="1"></td>
-      </tr>
-      <tr>
-        <td>B -> A</td>
-        <td><input type="radio" name="truefalse2" value="true"></td>
-	<td><input type="radio" name="truefalse2" value="false"></td>
-	<td>
-	  <input type="checkbox" name="tuples" id="t1" value="t1">
-	  <label for="t1">T1</label><br>
-	  <input type="checkbox" name="tuples" id="t2" value="t2">
-	  <label for="t2">T2</label><br>
-	  <input type="checkbox" name="tuples" id="t3" value="t3">
-	  <label for="t3">T3</label><br>
-        </td>
-	<!-- td > 
-	  <div class="btn-group-vertical ">
-	    <label  class="btn btn-secondary ">
-	      <input type="checkbox" class="btn-check" name="tuples" id="t1" value="t1">T1
-	    </label>
-	    <label  class="btn btn-secondary">
-	      <input type="checkbox" class="btn-check" name="tuples" id="t2" value="t2">T2
-	    </label>
-	    <label  class="btn btn-secondary">
-	      <input type="checkbox" class="btn-check" name="tuples" id="t3" value="t3">T3
-	    </label>
-	  </div>
-	</td>
-	<td >
-	 <div class="btn-group-vertical">
-	   <button type="button" class="btn btn-secondary">button</button> 
-	   <button type="button" class="btn btn-secondary">button</button> 
-	   <button type="button" class="btn btn-secondary">button</button> 
-	  </div>
-	</td -->
-	<td>
-	  <input type="checkbox" name="tuples" id="A" value="A">
-	  <label for="A">A</label><br>
-	  <input type="checkbox" name="tuples" id="B" value="B">
-	  <label for="B">B</label><br>
-	  <input type="checkbox" name="tuples" id="C" value="C">
-	  <label for="C">C</label><br>
-	</td>
-	<td>
-	  <input type="checkbox" name="tuples" id="A" value="A">
-	  <label for="A">A</label><br>
-	  <input type="checkbox" name="tuples" id="B" value="B">
-	  <label for="B">B</label><br>
-	  <input type="checkbox" name="tuples" id="C" value="C">
-	  <label for="C">C</label><br>
-	</td>
-        <td><input type="text" style=""></td>
-	<td><input type="radio" name="active" value="1"></td>
-      </tr>
 
-    </table>
-
-    
-
-    <table class = "table table-bordered table-sm col-md-2" id="problem-stmt">
+  <table class = "table table-bordered table-sm col-md-2" id="problem-stmt">
       <!-- js puts things here LOL -->
     </table>
 
+
+    <table class="table col-8 table-bordered" id="myTable">
+    
+    </table>
+
+
+
+
+    
+
     <a href="teacher.php" class="btn btn-primary">Teacher view</a>
+
+
+
+
   </body>
 </html>
