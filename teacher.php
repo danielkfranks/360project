@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
+  <div class="px-3 py-3">
     
 
 <form method="POST" id="form1" class="needs-validation" action="submit.php">
@@ -245,6 +246,9 @@ CREATE TABLE `NoDD`.`Problems` (`problem_id` INT(11) NOT NULL , `A1` INT(11) NOT
 ALTER TABLE `Problems` ADD PRIMARY KEY(`problem_id`);
 */
 </script>
+
+
+</div>
 
   </body>
 </html>

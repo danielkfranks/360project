@@ -116,6 +116,7 @@
 
   </head>
   <body>
+   <div class="px-3 py-3">
 
 
   <form method="POST">
@@ -131,7 +132,7 @@
           $result = mysqli_query($con, $query);
           if ($result) :
         ?>
-        <p>Please select the problem that you want to answer:</p>
+        <h5>Please select the problem that you want to answer:</h5>
         <select id="problem_id" name="problem_id">
           <?php
             while ($row = mysqli_fetch_assoc($result)) {
@@ -142,7 +143,7 @@
         <?php endif ?>
       </p>
       <p>
-        <input type="submit" value="Submit my choice"/>
+        <input class="btn btn-primary" type="submit" value="Submit"/>
       </p>
     </form>
 
@@ -206,7 +207,7 @@
             }
           ?>
         </table>
-        <button type="submit" class="btn btn-secondary" name="problem">Submit</button><br><br>
+        <button type="submit" class="btn btn-secondary" name="problem">Submit</button><br>
          </form>
       <?php endif?>
     <?php endif ?>
@@ -226,6 +227,6 @@
 
 
 
-
+         </div>
   </body>
 </html>

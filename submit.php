@@ -68,5 +68,5 @@ else{
 }
 ?>
 
-<p>Click this link to go back to the problem creation page: </p>
+<h3>Click this link to go back to the problem creation page: </h3>
 <a href="teacher.php" class="btn btn-primary">Teacher View</a>
