@@ -34,7 +34,7 @@
   $i = 0;
   $out = $stmt -> fetchAll();
   foreach($out as $o){
-	  printf(' <tr><td>%s</td>
+	  printf(' <tr><td><input type="text" style="" name="fd_' . $i . '" value="%s" required readonly></td>
      <td><input type="radio" name="truefalse_' . $i . '" value="true"></td>
      <td><input type="radio" name="truefalse_' . $i . '" value="false"></td>
      <td><input type="checkbox" name="tuples1_' . $i . '" id="t1" value="t1"> <label>t<sub>1</sub></label><br><input type="checkbox" name="tuples2_' . $i . '" id="t2" value="t2"> <label>t<sub>2</sub></label><br><input type="checkbox" name="tuples3_' . $i . '" id="t3" value="t3"> <label>t<sub>3</sub></label><br></td>
@@ -44,5 +44,5 @@
      <td><input type="radio" name="active" value="1"></td>
      </tr>
 ', $o['fd'], $o['problem_id']);
-$i = $i . 1;
+$i = $i + 1;
   }
